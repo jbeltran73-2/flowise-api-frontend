@@ -9,7 +9,7 @@ form.addEventListener("submit", async (e) => {
   console.log(messageInput.value);
 
   messageBtn.disabled = true;
-  messageBtn.innerHTML = "Sending...";
+  messageBtn.innerHTML = "Enviando...";
 
   try {
     const res = await fetch("/api/flowise", {
@@ -27,7 +27,7 @@ form.addEventListener("submit", async (e) => {
     responseEl.innerHTML = error.message;
   } finally {
     messageBtn.disabled = false;
-    messageBtn.innerHTML = "Send";
+    messageBtn.innerHTML = "Enviar";
     messageInput.value = "";
   }
 });
